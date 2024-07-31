@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Sharpy.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharpyGarage.Domain\SharpyGarage.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Garages\Queries\ObtenirDisponibilités\" />
+    <Folder Include="Features\OrdreRéparations\Commands\AttribuerMécanicien\" />
+    <Folder Include="Features\RendezVouss\Commands\AnnulerRendezVous\" />
+  </ItemGroup>
+
+</Project>

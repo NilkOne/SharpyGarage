@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sharpy.SharpyGarage.Domain.Entities.Véhicule">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAEAAAAAAAAAAAAAABAAAAAAAAAAAAABAEAQ=</HashCode>
+      <FileName>Entities\Véhicule.cs</FileName>
+      <NewMemberFileName>Entities\Client.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Client" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sharpy.SharpyGarage.Domain.Entities.Client">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAAAAACAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Entities\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharpy.SharpyGarage.Domain.Entities.Garage">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAABQCAAAAAAAAAAAIAAACAAAACAQAAIQAAAAAA=</HashCode>
+      <FileName>Entities\Garage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HoraireOuverture" />
+      <Property Name="Adresse1" />
+      <Property Name="RendezVous" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sharpy.SharpyGarage.Domain.Entities.Mécanicien">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <AssociationLine Name="Garage" Type="Sharpy.SharpyGarage.Domain.Entities.Garage" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="3.688" />
+        <Point X="9" Y="3.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAGAAAAAAAAAAAAAAAAAAAAACAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Entities\Mécanicien.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Garage" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sharpy.SharpyGarage.Domain.Entities.OrdreRéparation">
+    <Position X="10" Y="6" Width="1.5" />
+    <AssociationLine Name="Garage1" Type="Sharpy.SharpyGarage.Domain.Entities.Garage" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.602" Y="6" />
+        <Point X="10.602" Y="4.5" />
+        <Point X="9" Y="4.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Mécanicien" Type="Sharpy.SharpyGarage.Domain.Entities.Mécanicien">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.047" Y="0.115" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Véhicule1" Type="Sharpy.SharpyGarage.Domain.Entities.Véhicule" ManuallyRouted="true">
+      <Path>
+        <Point X="10.203" Y="6" />
+        <Point X="10.203" Y="5.569" />
+        <Point X="8.865" Y="5.569" Type="JumpStart" />
+        <Point X="8.698" Y="5.569" Type="JumpEnd" />
+        <Point X="5.611" Y="5.569" />
+        <Point X="5.611" Y="2.778" />
+        <Point X="4.5" Y="2.778" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAGAAAFAAgAAAQAIgEAAAACAAAQCAQhAAAAAAAAAAQ=</HashCode>
+      <FileName>Entities\OrdreRéparation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Client1" />
+      <Property Name="Garage1" />
+      <Property Name="Mécanicien" />
+      <Property Name="Prestation1" />
+      <Property Name="RendezVous" />
+      <Property Name="OrdreRéparationStatut" />
+      <Property Name="Véhicule1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sharpy.SharpyGarage.Domain.Entities.Prestation">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAAAAAIAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Prestation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharpy.SharpyGarage.Domain.Entities.RendezVous">
+    <Position X="4.25" Y="6" Width="1.5" />
+    <AssociationLine Name="Client1" Type="Sharpy.SharpyGarage.Domain.Entities.Client" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="6.688" />
+        <Point X="1.5" Y="6.688" />
+        <Point X="1.5" Y="3.68" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Garage1" Type="Sharpy.SharpyGarage.Domain.Entities.Garage" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="6" />
+        <Point X="5.25" Y="4.331" />
+        <Point X="5.527" Y="4.331" Type="JumpStart" />
+        <Point X="5.694" Y="4.331" Type="JumpEnd" />
+        <Point X="7.5" Y="4.331" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAGABAEAAAAAAQAAgEAAAACAAAACAQhAAAAAAAAAAQ=</HashCode>
+      <FileName>Entities\RendezVous.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Client1" />
+      <Property Name="Garage1" />
+      <Property Name="Prestation1" />
+      <Property Name="RendezVousStatut" />
+      <Property Name="Véhicule1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sharpy.SharpyGarage.Domain.ValueObjects.Adresse">
+    <Position X="12.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAQAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ValueObjects\Adresse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharpy.SharpyGarage.Domain.ValueObjects.HoraireOuverture">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABQAAAAAAA=</HashCode>
+      <FileName>ValueObjects\HoraireOuverture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Sharpy.SharpyGarage.Domain.Entities.OrdreRéparationStatut">
+    <Position X="12.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAA=</HashCode>
+      <FileName>Entities\OrdreRéparationStatut.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sharpy.SharpyGarage.Domain.Entities.RendezVousStatut">
+    <Position X="1.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAACQAAA=</HashCode>
+      <FileName>Entities\RendezVousStatut.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
